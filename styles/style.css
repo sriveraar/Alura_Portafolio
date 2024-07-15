@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /* importa estilo de font*/
+
+:root{ /* para declarar variables*/
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+*{
+    padding: 0; /* define la distancia entre un contenido y sus bordes*/
+    margin: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px /* crea un espaco entre los elementos (debe estar display: flex; para que se active*/
+}
+
+.header_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600px;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 6% 15%; /* arriba y abajo*/
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion_cotenido{
+    width: 50%;  /* Se adapta al 50% del tamaño del body*/
+    display: flex;
+    flex-direction: column; /* indica la dirección en la que se ordena el contenido (en este caso arriba para abajo)*/
+    gap: 40px; /* crea un espaco entre los elementos (debe estar display: flex; para que se active*/
+}
+
+.presentaion_contenido_titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titulo_destaque{
+    color: var(--color-terciario);
+}
+
+.presentacion_cotenido_texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;  /* indica la dirección en la que se ordena el contenido (en este caso arriba para abajo)*/
+    align-items: center;
+    gap: 32px /* crea un espaco entre los elementos (debe estar display: flex; para que se active*/
+}
+
+.presentacion_enlaces_subtitulo{
+    font-size: 1.5rem;
+    font-family: var(--fuente-krona);
+    font-weight: 400px;
+}
+
+.presentacion_enlaces_link{
+    width: 50%; /* Se adapta al 50% del tamaño del body*/
+    text-align: center;
+    padding: 21.5px 0px;
+    border-radius: 8px; /* redondea las esquinas del cuadro*/
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none; /* quita todas las decoracciones extra (en este caso el subrayado)*/
+    color: #F6F6F6;
+    border: 2PX SOLID var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px /* crea un espaco entre los elementos (debe estar display: flex; para que se active*/
+}
+
+.presentacion_enlaces_link:hover{ /* aplica otros colores cuando se pasa el cursor por encima*/
+    background-color: var(--color-hover);
+}
+
+.presentación_imagen{
+    width: 50%;  /* Se adapta al 50% del tamaño del body*/
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400px;
+}
+
+@media (max-width: 1200px){
+
+        .header{
+            padding: 10%;
+        }
+
+        .header_menu{
+            justify-content: center;
+        }
+
+        .presentacion{
+            flex-direction: column-reverse;
+            padding: 5%;
+        }
+
+        .presentacion_cotenido{
+            width: 100%;
+        }
+}
