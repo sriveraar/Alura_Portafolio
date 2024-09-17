@@ -102,7 +102,7 @@ body{
     background-color: var(--color-hover);
 }
 
-.presentacion_imagen{
+.presentación_imagen{
     width: 50%;  /* Se adapta al 50% del tamaño del body*/
 }
 
